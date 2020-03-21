@@ -1,8 +1,10 @@
+#!/bin/bash -x
+
 array=(-1 -2 -3 0 1 2 3)
 index1=0
 index2=0
 index3=0
-found=0
+flag=0
 echo "Triplets whose sum is zero are:"
 for((index1=0;index1<${#array[@]}-2;index1++))
 do
@@ -18,7 +20,7 @@ do
 		done
 	done
 done
-if(($found==0))
+if(($flag==0))
 then
 	printf "No three integer sum 0 found "
 fi
